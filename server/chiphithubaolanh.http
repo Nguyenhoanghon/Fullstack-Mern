@@ -1,0 +1,57 @@
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "HoangHon",
+  "password": "jim"
+}
+
+###
+
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "HoangHon",
+  "password": "jim"
+}
+
+### Test thêm chi phí thu bảo lãnh
+POST http://localhost:4000/api/chiphithubaolanh/insert
+Content-Type: application/json
+Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NTk3OTI2MzN9.0eb78esUSea4pK9VwCpT7WQ2lHNAqNIcn-SNPuMUSgU
+
+{
+  "noidung": "BL dự thầu",
+  "giatrithubaolanh": 360000000,
+  "sothang": 3,
+  "tilephi": 0.02,
+  //thanhtien = 
+  "ghichu": "Giá trị thu bao lanh"
+}
+
+###test get chiphithubaolanh
+
+GET http://localhost:4000/api/chiphithubaolanh
+Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NTk3OTI2MzN9.0eb78esUSea4pK9VwCpT7WQ2lHNAqNIcn-SNPuMUSgU
+###
+
+PUT http://localhost:4000/api/chiphithubaolanh/62ee7211869ad71598864bc8
+Content-Type: application/json
+Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NTk3OTI2MzN9.0eb78esUSea4pK9VwCpT7WQ2lHNAqNIcn-SNPuMUSgU
+
+{
+  "noidung": "BL dự thầu erer CẬP NHẬT deeeeeeee",
+  "giatrithubaolanh": 360000000,
+  "sothang": 3,
+  "tilephi": 0.02,
+  //thanhtien = 
+  "ghichu": "Giá trị thu bao lanh"
+}
+
+###
+
+DELETE http://localhost:4000/api/chiphithubaolanh/62ee7211869ad71598864bc8
+Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NTk3OTQzNzR9.eG_Ys9DqeY-7wAKjNqlLineYRPlpewNgNDuJS9_ISQM
+
+
