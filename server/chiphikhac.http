@@ -23,7 +23,7 @@ Content-Type: application/json
 Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NjAwMjYxNTh9.k7hR1zdTrDe0jyTypzIga0fX1j5pMtXB6kVaiBvUOQg
 
 {
-  "noidung": "Nodejs",
+  "noidung": "Nodejs4444",
   "sotien": 5000,
   "ghichu": "TO LEARN"
 }
@@ -35,12 +35,12 @@ Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmV
 
 ###
 
-PUT http://localhost:5000/api/chiphikhac/62ee5fa2e66a8033602a1e93
+PUT http://localhost:5000/api/chiphikhac/62fe1a5af369450af479fac1
 Content-Type: application/json
 Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NjAwMjYxNTh9.k7hR1zdTrDe0jyTypzIga0fX1j5pMtXB6kVaiBvUOQg
 
 {
-  "noidung": "Hop Dong",
+  "noidung": "Hop Dong Caapj nhaat",
   "sotien": 10000,
   "ghichu": "TO LEARN"
 }
@@ -48,6 +48,6 @@ Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmV
 
 ###
 
-DELETE http://localhost:5000/api/chiphikhac/62ee5fa2e66a8033602a1e93
+DELETE http://localhost:5000/api/chiphikhac/62fe1a5af369450af479fac1
 Authorization: HoangHon eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVlNTVmNmZhYzcyZTE0MjRhMGEyMTkiLCJpYXQiOjE2NjAwMjYxNTh9.k7hR1zdTrDe0jyTypzIga0fX1j5pMtXB6kVaiBvUOQg
 

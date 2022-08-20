@@ -13,7 +13,9 @@ const TablePost = ({ post: { _id, status, title, description, url } }) => {
           <td>{status}</td>
           <td>{title}</td>
           <td>{description}</td>
-		  <td>{url}</td>
+		      <td>{url}</td>
+          <td><ActionButtons/></td>
+
         </tr>
   );
 }

@@ -8,10 +8,10 @@ const Chiphikhac = require('../models/Chiphikhac_Model')
 // @access Private
 router.get('/', verifyToken, async(req, res) => {
     try {
-        const chiphikhac = await Chiphikhac.find({ user: req.userId }).populate('user', [
+        const DataChiphikhac = await Chiphikhac.find({ user: req.userId }).populate('user', [
             'username'
         ])
-        res.json({ success: true, chiphikhac })
+        res.json({ success: true, DataChiphikhac })
     } catch (error) {
         console.log(error)
         res.status(500).json({ success: false, message: 'Internal server error' })

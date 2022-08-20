@@ -2,12 +2,12 @@ import { createContext, useReducer, useState } from 'react'
 import { postReducer } from '../reducers/postReducer'
 import {
 	apiUrl,
-	LOADED_FAIL,
-	LOADED_SUCCESS,
-	ADD,
-	DELETE,
-	UPDATE,
-	FIND
+	POSTS_LOADED_FAIL,
+	POSTS_LOADED_SUCCESS,
+	ADD_POST,
+	DELETE_POST,
+	UPDATE_POST,
+	FIND_POST
 } from './constants'
 import axios from 'axios'
 
@@ -34,10 +34,10 @@ const PostContextProvider = ({ children }) => {
 		try {
 			const response = await axios.get(`${apiUrl}/posts`)
 			if (response.data.success) {
-				dispatch({ type: LOADED_SUCCESS, payload: response.data.posts })
+				dispatch({ type: POSTS_LOADED_SUCCESS, payload: response.data.posts })
 			}
 		} catch (error) {
-			dispatch({ type: LOADED_FAIL })
+			dispatch({ type: POSTS_LOADED_FAIL })
 		}
 	}
 
@@ -46,7 +46,7 @@ const PostContextProvider = ({ children }) => {
 		try {
 			const response = await axios.post(`${apiUrl}/posts`, newPost)
 			if (response.data.success) {
-				dispatch({ type: ADD, payload: response.data.post })
+				dispatch({ type: ADD_POST, payload: response.data.post })
 				return response.data
 			}
 		} catch (error) {
@@ -61,7 +61,7 @@ const PostContextProvider = ({ children }) => {
 		try {
 			const response = await axios.delete(`${apiUrl}/posts/${postId}`)
 			if (response.data.success)
-				dispatch({ type: DELETE, payload: postId })
+				dispatch({ type: DELETE_POST, payload: postId })
 		} catch (error) {
 			console.log(error)
 		}
@@ -70,7 +70,7 @@ const PostContextProvider = ({ children }) => {
 	// Find post when user is updating post
 	const findPost = postId => {
 		const post = postState.posts.find(post => post._id === postId)
-		dispatch({ type: FIND, payload: post })
+		dispatch({ type: FIND_POST, payload: post })
 	}
 
 	// Update post
@@ -81,7 +81,7 @@ const PostContextProvider = ({ children }) => {
 				updatedPost
 			)
 			if (response.data.success) {
-				dispatch({ type: UPDATE, payload: response.data.post })
+				dispatch({ type: UPDATE_POST, payload: response.data.post })
 				return response.data
 			}
 		} catch (error) {

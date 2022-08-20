@@ -5,9 +5,13 @@ import Auth from './views/Auth'
 import AuthContextProvider from './contexts/AuthContext'
 import Dashboard from './views/Dashboard'
 import ProtectedRoute from './components/routing/ProtectedRoute'
+
+
 import About from './views/About'
 import PostContextProvider from './contexts/PostContext'
-import Chiphikhac from './views/Chiphikhac'
+import CPKContextProvider from './contexts/CPKContext'
+
+import CPK from './views/CPK'
 import Chiphibaolanh from './views/Chiphibaolanh'
 import Mandaykysu from './views/Mandaykysu'
 import Chiphitrienkhai from './views/Chiphitrienkhai'
@@ -34,7 +38,10 @@ function App() {
 						/>
 						<ProtectedRoute exact path='/dashboard' component={Dashboard} />
 						<ProtectedRoute exact path='/about' component={About} />
-						<ProtectedRoute exact path='/chiphikhac' component={Chiphikhac} />{/* new */}
+						<CPKContextProvider>
+							<ProtectedRoute exact path='/chiphikhac' component={CPK} />{/* new */}
+						</CPKContextProvider>
+											
 						<ProtectedRoute exact path='/chiphibaolanh' component={Chiphibaolanh} />{/* new */}
 						<ProtectedRoute exact path='/mandaykysu' component={Mandaykysu} />{/* new */}
 						<ProtectedRoute exact path='/chiphitrienkhai' component={Chiphitrienkhai} />{/* new */}
