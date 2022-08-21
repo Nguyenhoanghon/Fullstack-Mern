@@ -70,7 +70,7 @@ const NavbarMenu = () => {
 						to='/chiphibaolanh'
 						as={Link}
 					>
-						CP bảo lãnh
+						CP thư bảo lãnh
 					</Nav.Link>
 					<Nav.Link
 						className='font-weight-bolder text-white'

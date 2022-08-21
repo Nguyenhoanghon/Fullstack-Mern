@@ -89,7 +89,7 @@ router.put('/:id', verifyToken, async(req, res) => {
         res.json({
             success: true,
             message: 'Excellent progress!',
-            post: updatedChiphithubaolanh
+            updatedChiphithubaolanh: updatedChiphithubaolanh
         })
     } catch (error) {
         console.log(error)

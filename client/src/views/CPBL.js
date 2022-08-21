@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const Chiphitrienkhai = () => {
+const About = () => {
 	return (
 		<Row className='mt-5' style={{ marginRight: 0 }}>
 			<Col className='text-center'>
@@ -11,11 +11,11 @@ const Chiphitrienkhai = () => {
 					href='https://www.youtube.com/c/HenryWebDev'
 					size='lg'
 				>
-					Welcome Chi phí triển khai
+					CHI PHI BAO LÃNH
 				</Button>
 			</Col>
 		</Row>
 	)
 }
 
-export default Chiphitrienkhai
+export default About

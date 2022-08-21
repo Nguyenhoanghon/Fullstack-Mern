@@ -10,14 +10,10 @@ import ProtectedRoute from './components/routing/ProtectedRoute'
 import About from './views/About'
 import PostContextProvider from './contexts/PostContext'
 import CPKContextProvider from './contexts/CPKContext'
+import CPTBLContextProvider from './contexts/CPTBLContext'
 
 import CPK from './views/CPK'
-import Chiphibaolanh from './views/Chiphibaolanh'
-import Mandaykysu from './views/Mandaykysu'
-import Chiphitrienkhai from './views/Chiphitrienkhai'
-import Chiphivon from './views/Chiphivon'
-import Chitiethanghoa from './views/Chitiethanghoa'
-import PTHD from './views/PTHD'
+import CPTBL from './views/CPTBL'
 
 function App() {
 	return (
@@ -38,16 +34,17 @@ function App() {
 						/>
 						<ProtectedRoute exact path='/dashboard' component={Dashboard} />
 						<ProtectedRoute exact path='/about' component={About} />
+						
+						<CPTBLContextProvider>
+							<ProtectedRoute exact path='/chiphibaolanh' component={CPTBL} />{/* new */}
+						</CPTBLContextProvider>
+						
 						<CPKContextProvider>
 							<ProtectedRoute exact path='/chiphikhac' component={CPK} />{/* new */}
 						</CPKContextProvider>
-											
-						<ProtectedRoute exact path='/chiphibaolanh' component={Chiphibaolanh} />{/* new */}
-						<ProtectedRoute exact path='/mandaykysu' component={Mandaykysu} />{/* new */}
-						<ProtectedRoute exact path='/chiphitrienkhai' component={Chiphitrienkhai} />{/* new */}
-						<ProtectedRoute exact path='/chiphivon' component={Chiphivon} />{/* new */}
-						<ProtectedRoute exact path='/chitiethanghoa' component={Chitiethanghoa} />{/* new */}
-						<ProtectedRoute exact path='/PTHD' component={PTHD} />{/* new */}
+							
+
+						
 					</Switch>
 				</Router>
 			</PostContextProvider>
