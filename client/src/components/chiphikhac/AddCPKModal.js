@@ -17,7 +17,7 @@ const AddCPKModal = () => {
 	const [newCPK, setNewCPK] = useState({
 		noidung: '',
 		sotien: '',
-		ghichu: ''
+		ghichu: ' '
 	})
 
 	const { noidung, sotien, ghichu } = newCPK
@@ -51,7 +51,7 @@ const AddCPKModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Noidung'
+							placeholder='Nội dung chi phí'
 							name='noidung'
 							required
 							aria-describedby='title-help'
@@ -59,13 +59,12 @@ const AddCPKModal = () => {
 							onChange={onChangeNewCPKForm}
 						/>
 						<Form.Text id='title-help' muted>
-							Required
+							Bắt buộc phải nhập
 						</Form.Text>
 					</Form.Group>
 					<Form.Group>
 						<Form.Control
-							as='textarea'
-							rows={3}
+							tpye='text'
 							placeholder='số tiền'
 							name='sotien'
 							value={sotien} /* tạo ràn buộc số */

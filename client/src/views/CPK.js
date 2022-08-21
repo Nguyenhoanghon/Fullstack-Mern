@@ -11,7 +11,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import Col from 'react-bootstrap/Col'
 
-
 import AddCPKModal from '../components/chiphikhac/AddCPKModal'//Note
 import UpdateCPKModal from '../components/chiphikhac/UpdateCPKModal'//Note
 
@@ -35,12 +34,27 @@ const CPK = () => {
 		setShowToast
 	} = useContext(CPKContext)
 
+	// hàm tính tổng 
+	function sumArray(mang){
+    let sum = 0;
+    mang.map(function(value){
+        sum += value;
+    });
+    return sum;
+	}
+	//Định dạng hiển thị số
+	function formatCash(str) {
+ 	return str.split('').reverse().reduce((prev, next, index) => {
+ 		return ((index % 3) ? next : (next + ',')) + prev
+ 	})
+}
+
 	// Start: Get all CPKs
 	useEffect(() => getCPKs(), [])
 
 	let body = null
 	let stt = 1
-	const [tong, settong] = useState(0) 
+	const tong =  sumArray(CPKs.map((CPK) => CPK.sotien))
 	if (CPKsLoading) {
 		body = (
 			<div className='spinner-container'>
@@ -55,36 +69,22 @@ const CPK = () => {
 					<Card.Body>
 						<Card.Title>Welcome Chi phí khác</Card.Title>
 						<Card.Text>
-							Click the button below to track your first skill to learn
+							Chưa có chi phí khác
 						</Card.Text>
 						<Button
 							variant='primary'
 							onClick={setShowAddCPKModal.bind(this, true)}
 						>
-							LearnIt!
+							Thêm!
 						</Button>
 					</Card.Body>
 				</Card>
 			</>
 		)
 	} else {
+		
 		body = (
 			<>
-				{/* Open Add CPK Modal */}
-				<OverlayTrigger
-					placement='left'
-					overlay={<Tooltip>Thêm mới</Tooltip>}
-				>
-					<Button
-						className='btn-floating'
-						onClick={setShowAddCPKModal.bind(this, true)}
-					>
-						<img src={addIcon} alt='add-CPK' width='60' height='60' />
-					</Button>
-				</OverlayTrigger>
-				{/* Show Data */
-				
-				}
 				<Card className='text-center mx-5 my-5'>
 					<Card.Header as='h1'>CHI PHÍ KHÁC</Card.Header>
 					<Card.Body>
@@ -102,19 +102,19 @@ const CPK = () => {
 								<tr key={CPK._id} >
 									<td>{stt++}  </td>
 									<td>{CPK.noidung}</td>
-									<td>{CPK.sotien}</td>
+									<td>{CPK.sotien.toLocaleString()}</td>
 									<td>{CPK.ghichu}  </td>
 									<td>
 									<ActionButtons_CPK _id={CPK._id} />
 									</td>
-								CPK.sotien
+								
 								</tr>
 								
 								))
 								}
 								<tr>
 									<td colSpan={2} >Tổng</td>
-									<td>{1000}</td>
+									<td>{tong.toLocaleString()}</td>
 									<td>Ghi chú</td>
 								</tr>
 							</tbody>
