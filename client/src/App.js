@@ -11,10 +11,11 @@ import About from './views/About'
 import PostContextProvider from './contexts/PostContext'
 import CPKContextProvider from './contexts/CPKContext'
 import CPTBLContextProvider from './contexts/CPTBLContext'
+import MDKSContextProvider from './contexts/MDKSContext'
 
 import CPK from './views/CPK'
 import CPTBL from './views/CPTBL'
-
+import MDKS from './views/MDKS'
 function App() {
 	return (
 		<AuthContextProvider>
@@ -32,17 +33,24 @@ function App() {
 							path='/register'
 							render={props => <Auth {...props} authRoute='register' />}
 						/>
+						<>
+						
 						<ProtectedRoute exact path='/dashboard' component={Dashboard} />
 						<ProtectedRoute exact path='/about' component={About} />
+						<CPKContextProvider>
+							<ProtectedRoute exact path='/chiphikhac' component={CPK} />
+						</CPKContextProvider>
+						
 						
 						<CPTBLContextProvider>
 							<ProtectedRoute exact path='/chiphibaolanh' component={CPTBL} />{/* new */}
 						</CPTBLContextProvider>
+						<MDKSContextProvider>
+							<ProtectedRoute exact path='/mandaykysu' component={MDKS} />
+						</MDKSContextProvider>
 						
-						<CPKContextProvider>
-							<ProtectedRoute exact path='/chiphikhac' component={CPK} />{/* new */}
-						</CPKContextProvider>
-							
+						
+						</>
 
 						
 					</Switch>

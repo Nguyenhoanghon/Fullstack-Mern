@@ -18,12 +18,13 @@ const Auth = ({ authRoute }) => {
 				<Spinner animation='border' variant='info' />
 			</div>
 		)
-	else if (isAuthenticated) return <Redirect to='/dashboard' />
+	else if (isAuthenticated) return <Redirect to='/Dashboard' />
 	else
 		body = (
 			<>
 				{authRoute === 'login' && <LoginForm />}
 				{authRoute === 'register' && <RegisterForm />}
+				
 			</>
 		)
 
@@ -31,8 +32,7 @@ const Auth = ({ authRoute }) => {
 		<div className='landing'>
 			<div className='dark-overlay'>
 				<div className='landing-inner'>
-					<h1>LearnIt</h1>
-					<h4>Keep track of what you are learning</h4>
+					<h1>QLHD_HNN</h1>
 					{body}
 				</div>
 			</div>

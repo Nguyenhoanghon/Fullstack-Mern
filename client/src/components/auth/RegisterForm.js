@@ -82,7 +82,7 @@ const RegisterForm = () => {
 					/>
 				</Form.Group>
 				<Button variant='success' type='submit'>
-					Register
+					Đăng ký
 				</Button>
 			</Form>
 			<p>

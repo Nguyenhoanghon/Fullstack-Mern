@@ -123,7 +123,7 @@ const AddCPTBLModal = () => {
 							onChange={onChangeNewCPTBLForm}
 						/>
 						<Form.Text id='tlp-help' muted>
-							Không Bắt buộc phải nhập tỉ lệ phí
+							Không Bắt buộc phải nhập
 						</Form.Text>
 					</Form.Group>
 				</Modal.Body>

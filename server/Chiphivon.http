@@ -12,8 +12,8 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-  "username": "HoangHon",
-  "password": "jim"
+  "username": "admin",
+  "password": "123"
 }
 
 ### Test thêm chi phí thu bảo lãnh
