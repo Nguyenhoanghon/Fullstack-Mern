@@ -83,16 +83,16 @@ const MDKS = () => {
 				<Card className='text-center mx-5 my-5'>
 					<Card.Header as='h1'>MANDAY KỸ SƯ</Card.Header>
 					<Card.Body>
-						<Table  striped bordered hover size="sm">
+						<Table responsive="lg" striped bordered hover size="lg" variant="" >
 							<thead>
 								<tr>
 								<th>STT</th>
 								<th>Phòng ban </th>
 								<th>Manday chuẩn</th>
-								<th>Số người tham gia dự án</th>
-								<th>Số ngày thực hiện dự án</th>
+								<th  width='10%'>Số người tham gia dự án</th>
+								<th width='10%'>Số ngày thực hiện dự án</th>
 								<th>Thành tiền</th>
-								<th>Ghi chú</th>
+								<th width='20%'>Ghi chú</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -116,7 +116,8 @@ const MDKS = () => {
 								<tr>
 									<td colSpan={5} >Tổng</td>
 									<td>{tong.toLocaleString()}</td>
-									<td>Ghi chú</td>
+									<td></td>
+									<td></td>
 								</tr>
 							</tbody>
     					</Table>

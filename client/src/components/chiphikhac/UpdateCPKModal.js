@@ -49,32 +49,39 @@ const UpdateCPKModal = () => {
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
+						<Form.Text id='noidung-help' muted as="h6">
+							Nội dung chi phí
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung chi phí'
+							placeholder='Nhập chuỗi'
 							name='noidung'
 							required
-							aria-describedby='title-help'
+							aria-describedby='noidung-help'
 							value={noidung}
 							onChange={onChangeUpdatedCPKForm}
-						/>
-						<Form.Text id='title-help' muted>
-							Required
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='sotien-help' muted  as="h6">
+							Số tiền
+						</Form.Text>
 						<Form.Control
-							type='text'
-							placeholder='Số tiền'
+							tpye='text'
+							placeholder='Nhập số'
 							name='sotien'
-							value={sotien}
+							value={sotien.toLocaleString()} /* tạo ràn buộc số */
 							onChange={onChangeUpdatedCPKForm}
 						/>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='ghichu-help' muted as="h6">
+							Ghi chú
+						</Form.Text>
 						<Form.Control
-							type='text'
-							placeholder='Ghi chú'
+							as='textarea'
+							rows={3}
+							placeholder='Nhập chuỗi'
 							name='ghichu'
 							value={ghichu}
 							onChange={onChangeUpdatedCPKForm}

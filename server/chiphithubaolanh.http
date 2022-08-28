@@ -19,7 +19,7 @@ Content-Type: application/json
 ### Test thêm chi phí thu bảo lãnh
 POST http://localhost:5000/api/chiphithubaolanh/insert
 Content-Type: application/json
-Authorization: admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmYzMGY4MTRhN2RhODNkYTQxZGMzY2EiLCJpYXQiOjE2NjEwODE3ODR9.83tehhtaxbIlDvvmSqEGRPYrmb_nIcHqrNus7pI3bLE
+Authorization: admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzAyYmM0ODE3MGJmYzBhYjQ4NTJiMTMiLCJpYXQiOjE2NjE2MDk5MzF9.ltsUiTzsFvqFUnFpj-VmCgxLYgNVf3nwJvd4RoIChTw
 
 {
   "noidung": "BL dự thầu",

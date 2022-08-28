@@ -49,32 +49,39 @@ const AddCPKModal = () => {
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
+						<Form.Text id='noidung-help' muted as="h6">
+							Nội dung chi phí
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung chi phí'
+							placeholder='Nhập chuỗi'
 							name='noidung'
 							required
-							aria-describedby='title-help'
+							aria-describedby='noidung-help'
 							value={noidung}
 							onChange={onChangeNewCPKForm}
-						/>
-						<Form.Text id='title-help' muted>
-							Bắt buộc phải nhập
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='sotien-help' muted  as="h6">
+							Số tiền
+						</Form.Text>
 						<Form.Control
 							tpye='text'
-							placeholder='số tiền'
+							placeholder='Nhập số'
 							name='sotien'
 							value={sotien} /* tạo ràn buộc số */
 							onChange={onChangeNewCPKForm}
 						/>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='ghichu-help' muted as="h6">
+							Ghi chú
+						</Form.Text>
 						<Form.Control
-							type='text'
-							placeholder='ghichu'
+							as='textarea'
+							rows={3}
+							placeholder='Nhập chuỗi'
 							name='ghichu'
 							value={ghichu}
 							onChange={onChangeNewCPKForm}
@@ -85,7 +92,7 @@ const AddCPKModal = () => {
 					<Button variant='secondary' onClick={closeDialog}>
 						Hủy
 					</Button>
-					<Button variant='primary' type='submit'>
+					<Button variant='info' type='submit'>
 						Thêm!
 					</Button>
 				</Modal.Footer>

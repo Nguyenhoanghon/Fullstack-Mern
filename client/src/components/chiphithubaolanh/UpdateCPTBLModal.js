@@ -49,69 +49,75 @@ const UpdateCPTBLModal = () => {
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Nội dung chi phí
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung chi phí'
+							placeholder='Nhập chuỗi'
 							name='noidung'
 							required
-							aria-describedby='title-help'
+							aria-describedby='noidung-help'
 							value={noidung}
 							onChange={onChangeUpdatedCPTBLForm}
-						/>
-						<Form.Text id='title-help' muted>
-							Bắt buộc phải nhập
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='gttbl-help' muted as='h6'>
+							Giá trị thư bảo lãnh
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Giá trị thư bảo lãnh'
+							placeholder='Nhập số'
 							name='giatrithubaolanh'
 							required
 							aria-describedby='gttbl-help'
-							value={giatrithubaolanh}
+							value={giatrithubaolanh.toLocaleString()}
 							onChange={onChangeUpdatedCPTBLForm}
-						/>
-						<Form.Text id='title-help' muted>
-							Bắt buộc phải nhập trị thư bảo lãnh
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='gttbl-help' muted as='h6'>
+							Số tháng
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Số tháng'
+							placeholder='Nhập số'
 							name='sothang'
 							required
-							aria-describedby='title-help'
+							aria-describedby='sothang-help'
 							value={sothang}
 							onChange={onChangeUpdatedCPTBLForm}
-						/>
-						<Form.Text id='sothang-help' muted>
-							Bắt buộc phải nhập số tháng
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='tilephi-help' muted as='h6'>
+							Tỉ lệ phí
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Tỉ lệ phí'
+							placeholder='0.02'
 							name='tilephi'
 							required
-							aria-describedby='title-help'
+							aria-describedby='tilephi-help'
 							value={tilephi}
 							onChange={onChangeUpdatedCPTBLForm}
 						/>
-						<Form.Text id='tlp-help' muted>
-							Bắt buộc phải nhập tỉ lệ phí
-						</Form.Text>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='ghichu-help' muted as='h6'>
+							Ghi chú
+						</Form.Text>
 						<Form.Control
-							type='text'
-							placeholder='ghichu'
+							as='textarea'
+							rows={3}
+							placeholder='Ghi chú'
 							name='ghichu'
+							required
+							aria-describedby='ghichu-help'
 							value={ghichu}
 							onChange={onChangeUpdatedCPTBLForm}
-						/>
+						/>						
 					</Form.Group>
 				</Modal.Body>
 				<Modal.Footer>

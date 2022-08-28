@@ -1,17 +1,18 @@
-import Button from 'react-bootstrap/Button'
+import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const PTHD = () => {
-	return (
+
+const CPV = () => {
+  return (
 		<Row className='mt-5' style={{ marginRight: 0 }}>
 			<Col className='text-center' as='h1'>
 				
-					Page Phân tích hợp đồng tổng hợp
+					Page Chi phí vốn
 				
 			</Col>
 		</Row>
-	)
+  )
 }
 
-export default PTHD
+export default CPV

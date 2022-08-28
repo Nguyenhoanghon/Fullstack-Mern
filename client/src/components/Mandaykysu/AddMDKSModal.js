@@ -55,93 +55,94 @@ const AddMDKSModal = () => {
 	return (
 		<Modal show={showAddMDKSModal} onHide={closeDialog}>
 			<Modal.Header closeButton>
-				<Modal.Title>Bạn muốn thêm Mandaykysu?</Modal.Title>
+				<Modal.Title as='h6'>Bạn muốn thêm Mandaykysu?</Modal.Title>
 			</Modal.Header>
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Số này dùng tính thành tiền!
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='22400'
+							placeholder='22,400'
 							name='hesotinhthanhtien'
 							required
 							aria-describedby='title-help'
 							value={hesotinhthanhtien}
 							onChange={onChangeNewMDKSForm}
 						/>
-						<Form.Text id='title-help' muted>
-							Số này cần chú ý?
-						</Form.Text>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Phòng ban
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung Phòng ban'
+							placeholder='Nhập chuỗi'
 							name='phongban'
 							required
 							aria-describedby='title-help'
 							value={phongban}
 							onChange={onChangeNewMDKSForm}
-						/>
-						<Form.Text id='title-help' muted>
-							Phải nhập dữ liệu Phòng ban
-						</Form.Text>
+						/>						
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Manday chuẩn
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nhập Giá trị Mandaychuan'
+							placeholder='Nhập chuỗi'
 							name='mandaychuan'
 							required
 							aria-describedby='mandaychuan-help'
 							value={mandaychuan}
 							onChange={onChangeNewMDKSForm}
 						/>
-						<Form.Text id='title-help' muted>
-							Phải nhập trị Manday chuẩn
-						</Form.Text>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Số người tham gia dự án
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nhập số người kiểu số'
+							placeholder='Nhập số'
 							name='songuoi'
 							required
 							aria-describedby='songuoi-help'
 							value={songuoi}
 							onChange={onChangeNewMDKSForm}
 						/>
-						<Form.Text id='sothang-help' muted>
-							Phải nhập số người
-						</Form.Text>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Nhập số ngày thực hiện
+						</Form.Text>
 						<Form.Control
 							type='text'
-							placeholder='Nhập số ngày thực hiện'
+							placeholder='Nhập số'
 							name='songaythuchien'
 							required
 							aria-describedby='songaythuchien-help'
 							value={songaythuchien}
 							onChange={onChangeNewMDKSForm}
 						/>
-						<Form.Text id='tlp-help' muted>
-							Phải nhập số ngày thực hiện
-						</Form.Text>
 					</Form.Group>
 					<Form.Group>
+						<Form.Text id='title-help' muted as='h6'>
+							Ghi chú
+						</Form.Text>
 						<Form.Control
-							type='text'
-							placeholder='Ghi chú'
+							as='textarea'
+							rows={2}
+							placeholder=''
 							name='ghichu'
 							required
 							aria-describedby='ghichu-help'
 							value={ghichu}
 							onChange={onChangeNewMDKSForm}
 						/>
-						<Form.Text id='tlp-help' muted>
-							Không Bắt buộc phải nhập
-						</Form.Text>
 					</Form.Group>
 				</Modal.Body>
 				<Modal.Footer>

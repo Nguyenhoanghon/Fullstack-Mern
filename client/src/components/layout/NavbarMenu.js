@@ -18,18 +18,19 @@ const NavbarMenu = () => {
 	const logout = () => logoutUser()
 
 	return (
-		<Navbar expand='lg' bg='primary' variant='dark' className='shadow'>
+		<>
+		<Navbar expand='sm' bg='info' variant='dark' className='shadow'>
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
 
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto'>
-					<Nav.Link
+{/* 					<Nav.Link
 						className='font-weight-bolder text-white'
 						to='/dashboard'
 						as={Link}
 					>
 						Dashboard
-					</Nav.Link>
+					</Nav.Link> */}
 					<Nav.Link
 						className='font-weight-bolder text-white'
 						to='/PTHD'
@@ -79,36 +80,31 @@ const NavbarMenu = () => {
 					>
 						CP khác
 					</Nav.Link>
-					<Nav.Link
-						className='font-weight-bolder text-white'
-						to='/about'
-						as={Link}
-					>
-						About
-					</Nav.Link>
 				</Nav>
 
 				<Nav>
 					<Nav.Link className='font-weight-bolder text-white' disabled>
-						Welcome {username}
+						Xin chào {username}
 					</Nav.Link>
 					<Button
-						variant='secondary'
+						variant='info'
 						className='font-weight-bolder text-white'
 						onClick={logout}
 					>
 						<img
 							src={logoutIcon}
 							alt='logoutIcon'
-							width='32'
-							height='32'
+							width='18'
+							height='18'
 							className='mr-2'
 						/>
-						Logout
+						Đăng xuất
 					</Button>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
+		
+		</>
 	)
 }
 

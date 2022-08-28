@@ -13,10 +13,8 @@ import Col from 'react-bootstrap/Col'
 
 import AddCPTBLModal from '../components/chiphithubaolanh/AddCPTBLModal'//Note
 import UpdateCPTBLModal from '../components/chiphithubaolanh/UpdateCPTBLModal'//Note
-
 import addIcon from '../assets/plus-circle-fill.svg'
 import Table from 'react-bootstrap/Table'
-//import ActionButtons from '../components/posts/ActionButtons'
 import ActionButtons_CPTBL from '../components/chiphithubaolanh/ActionButtons_CPTBL'
 const CPTBL = () => {
 	// Contexts
@@ -65,12 +63,9 @@ const CPTBL = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>Hi {username}</Card.Header>
+					<Card.Header as='h5'>Form 5: Chi phí làm thư bảo lãnh</Card.Header>
 					<Card.Body>
-						<Card.Title>Welcome Chi phí thư bảo lanh</Card.Title>
-						<Card.Text>
-							Chưa có chi phí thư bảo lãnh
-						</Card.Text>
+						<Card.Title>Chưa có dữ liệu vui lòng click Thêm!</Card.Title>
 						<Button
 							variant='primary'
 							onClick={setShowAddCPTBLModal.bind(this, true)}
@@ -86,7 +81,7 @@ const CPTBL = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>CHI PHÍ THƯ BẢO LÃNH</Card.Header>
+					<Card.Header as='h5'>Form 5: Chi phí làm thư bảo lãnh</Card.Header>
 					<Card.Body>
 						<Table  striped bordered hover size="sm">
 							<thead>
@@ -97,7 +92,7 @@ const CPTBL = () => {
 								<th>Số tháng bảo lãnh</th>
 								<th>Tỉ lệ phí</th>
 								<th>Thành tiền</th>
-								<th>Ghi chú</th>
+								<th width='20%'>Ghi chú</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -121,7 +116,8 @@ const CPTBL = () => {
 								<tr>
 									<td colSpan={5} >Tổng</td>
 									<td>{tong.toLocaleString()}</td>
-									<td>Ghi chú</td>
+									<td></td>
+									<td></td>
 								</tr>
 							</tbody>
     					</Table>

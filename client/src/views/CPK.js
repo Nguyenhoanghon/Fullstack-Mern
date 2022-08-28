@@ -65,11 +65,11 @@ const CPK = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>Hi {username}</Card.Header>
+					<Card.Header as='h2'>Form 6: Chi phí khác</Card.Header>
 					<Card.Body>
-						<Card.Title>Welcome Chi phí khác</Card.Title>
+						<Card.Title>CHƯA CÓ DỮ LIỆU CHI PHÍ KHÁC</Card.Title>
 						<Card.Text>
-							Chưa có chi phí khác
+							Vui lòng bấm thêm! để mới
 						</Card.Text>
 						<Button
 							variant='primary'
@@ -86,15 +86,15 @@ const CPK = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>CHI PHÍ KHÁC</Card.Header>
+					<Card.Header as='h2'>Form 6: Chi phí khác</Card.Header>
 					<Card.Body>
 						<Table  striped bordered hover size="sm">
-							<thead>
+							<thead >
 								<tr>
 								<th>STT</th>
 								<th>Nội dung </th>
 								<th>Số Tiền</th>
-								<th>Ghi chú</th>
+								<th width='25%'>Ghi chú</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -115,7 +115,8 @@ const CPK = () => {
 								<tr>
 									<td colSpan={2} >Tổng</td>
 									<td>{tong.toLocaleString()}</td>
-									<td>Ghi chú</td>
+									<td></td>
+									<td></td>
 								</tr>
 							</tbody>
     					</Table>
